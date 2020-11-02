@@ -1,0 +1,46 @@
+<div class="row">
+	<div class="col-xs-12 edit-field">
+		<h2 class="edit-title">プロフィール編集</h2>
+		<div class="col-xs-1"></div>
+		<%= form_for(@user) do |f| %>
+		<div class="col-xs-4">
+				<%= attachment_image_tag @user, :profile_image, :size=>"150x150", class: "img-circle profile-thumb", fallback: "no_image.jpg" %>
+				<%= f.attachment_field :profile_image , class: "att-field" %>
+		<div class="edit-box form-group form-group-lg">
+			<%= f.label :ポートフォリオ, class: "port-field" %><br>
+			<%= f.text_area :port, autofocus: false, placeholder: "・自己紹介ページ http://mypage...", class: "form-control" %>
+		</div>
+		</div>
+		<div class="col-xs-1"></div>
+		<div class="col-xs-5 edit-text-field">
+		<div class="form-group">
+			<%= f.label :ニックネーム %><br>
+			<%= f.text_field :name, autofocus: true, class: "form-control" %>
+		</div>
+		<div class="form-group">
+			<%= f.label :年齢 %><br>
+			<%= f.number_field :age, autofocus: true, class: "form-control" %>
+		</div>
+
+		<div class="form-group">
+			<p>性別</p>
+			<%= f.radio_button :sex, "男" %><label>男</label>
+			<%= f.radio_button :sex, "女" %><label>女</label>
+			<%= f.radio_button :sex, "その他" %><label>その他</label>
+		</div>
+		<div class="edit-box form-group form-group-lg">
+			<%= f.label :自己紹介 %><br>
+			<%= f.text_area :intro, autofocus: true, placeholder: "初めまして！〇〇大学の〇〇と申します。出身は〜で、〜が有名です!HTML&CSS歴は１年ほどになります。よろしくお願いいたします(^ ^)", class: "form-control" %>
+			<p class="help-block">※200文字以内</p>
+		</div>
+		<div class="actions two-btn">
+			<%= f.submit "変更を保存", class: "btn btn-warning" %>
+			<%= link_to "キャンセル", user_path(@user.id), class: "btn btn-default", data: {"turbolinks" => false} %>
+			<%= link_to "ユーザーを消去", user_registration_path, class: "user_d_btn", method: :delete, data: {confirm: "本当に削除しますか？"} %>
+		</div>
+		<% end %>
+		</div>
+		<div class="col-xs-1"></div>
+	</div>
+</div>
+</div>

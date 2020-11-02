@@ -1,0 +1,10 @@
+.notice {
+	font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+	margin-bottom: 5px;
+	color: green;
+}
+.alert {
+  font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+  margin-bottom: 5px;
+  color: red;
+}

@@ -1,0 +1,111 @@
+<div class="index-wrap">
+<div class="row">
+	<div class="col-xs-12 add-field">
+		<h1 class="lang-title2"><%= @lang_name %></h1>
+		<%= link_to new_user_teach_path(current_user.id) do %>
+  		<div id="i-p-f" class="add-circle icon-plus"><span id="i-p" class="icon-plus glyphicon glyphicon-plus" aria-hidden="true"></span></div>
+  		<% end %>
+ 		 <div class="add-blow">
+  			<p>自分も教える！</p>
+ 		 </div>
+</div>
+</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		<h4>時給で検索</h4>
+		<%= form_tag({controller:"langs", action:"python"}, method: :get) do %>
+		<%= text_field_tag :search, '', placeholder: "2000円" %>
+		<%= submit_tag "検索", class: "btn-default" %>
+		<% end %>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		<h3 class="begi-title">初級学習者向けの先生</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 people-field">
+	    <% @users_begis.each do |ub| %>
+		  <div class="col-xs-4 col-sm-2 person-field">
+		 	<%= attachment_image_tag ub, :profile_image, :fill, 70, 70, class: "img-circle profile-thumb", fallback: "no_image.jpg"%><br>
+		 	<p class="prson-name"><%= ub.name %></p>
+			<% @ta_begis.each do |tb| %>
+				<% if tb.user_id == ub.id %>
+					<h5>経験:<%= tb.career %></h5>
+					<h5>希望時給:<%= tb.income %></h5>
+					<%= link_to "詳細へ", user_path(ub.id), data: {"turbolinks" => false} %>
+				<% end %>
+				<% if ub.id == current_user.id && tb.user_id == ub.id %>
+					<%= link_to edit_user_teach_path(ub.id, tb.id) do %>
+						<div class="edit-icon-circle">
+							<span class="glyphicon glyphicon-wrench"></span>
+						</div>
+					<% end %>
+				<% end %>
+			<% end %>
+		  </div>
+		<% end %>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12">
+		<h3 class="inte-title">中級学習者向けの先生</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 people-field">
+	    <% @users_intes.each do |ui| %>
+		  <div class="col-xs-4 col-sm-2 person-field">
+		 	<%= attachment_image_tag ui, :profile_image, :fill, 70, 70, class: "img-circle profile-thumb", fallback: "no_image.jpg"%><br>
+		 	<p class="prson-name"><%= ui.name %></p>
+			<% @ta_intes.each do |ti| %>
+				<% if ti.user_id == ui.id %>
+					<h5>経験:<%= ti.career %></h5>
+					<h5>希望時給:<%= ti.income %></h5>
+					<%= link_to "詳細へ", user_path(ui.id), data: {"turbolinks" => false} %>
+				<% end %>
+				<% if ui.id == current_user.id && ti.user_id == ui.id %>
+					<%= link_to edit_user_teach_path(ui.id, ti.id) do %>
+						<div class="edit-icon-circle">
+							<span class="glyphicon glyphicon-wrench"></span>
+						</div>
+					<% end %>
+				<% end %>
+			<% end %>
+		  </div>
+		<% end %>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12">
+		<h3 class="adva-title">上級学習者向けの先生</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 people-field">
+	    <% @users_advas.each do |ud| %>
+		  <div class="col-xs-4 col-sm-2 person-field">
+		 	<%= attachment_image_tag ud, :profile_image, :fill, 70, 70, class: "img-circle profile-thumb", fallback: "no_image.jpg"%><br>
+		 	<p class="prson-name"><%= ud.name %></p>
+			<% @ta_advas.each do |td| %>
+				<% if td.user_id == ud.id %>
+					<h5>経験:<%= td.career %></h5>
+					<h5>希望時給:<%= td.income %></h5>
+					<%= link_to "詳細へ", user_path(ud.id), data: {"turbolinks" => false} %>
+				<% end %>
+				<% if ud.id == current_user.id && td.user_id == ud.id %>
+					<%= link_to edit_user_teach_path(ud.id, td.id) do %>
+						<div class="edit-icon-circle">
+							<span class="glyphicon glyphicon-wrench"></span>
+						</div>
+					<% end %>
+				<% end %>
+			<% end %>
+		  </div>
+		<% end %>
+	</div>
+</div>

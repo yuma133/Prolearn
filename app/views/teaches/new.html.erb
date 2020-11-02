@@ -1,0 +1,29 @@
+<div class="row">
+	<div class="col-xs-12">
+		<div class="t-regi-field">
+		<h2 class="t-regi-title">教師登録</h2>
+			<%= form_for [@user, @teach], url: user_teaches_path do |f| %>
+			<div class="form-group">
+			<p class="sel-lang-n">どの言語を教える？*</p>
+				<span class="sele-lang-b">
+				<%= f.select :lang, [["HTML&CSS", "htmlcss"], ["C言語","c"], ["Java", "java"], ["Ruby" , "ruby"], ["Python", "python"], ["JavaScript", "js"], ["PHP", "php"], ["Ruby on rails", "rails"], ["jQuory", "jquery"]], class: "form-control sele-lang-b" %>
+				</span>
+			</div>
+			<div class="form-group">
+				<p>その言語に対する習熟度は？*</p>
+				<%= f.radio_button :level, "begi" %><p class="sel-level-n">初級</p>
+			    <%= f.radio_button :level, "inte" %><p class="sel-level-n">中級</p>
+			    <%= f.radio_button :level, "adva" %><p class="sel-level-n">上級</p>
+			    <br>
+		    </div>
+				<%= f.label :経験 %><p>*</p><br>
+	   			<%= f.text_field :career, autofocus: true, placeholder: "Ruby1年、Java半年", class: "form-control t-regi-f" %><br>
+	  			<%= f.label :希望時給 %><p>*</p>
+	   			<%= f.text_field :income, autofocus: true, placeholder: "1500円~2000円", class: "form-control t-regi-f" %>
+	   		<div class="actions">
+	   			<%= f.submit "保存する", class: "btn btn-success t-regi-s" %>
+	    	<% end %>
+	        </div>
+	    </div>
+	</div>
+</div>

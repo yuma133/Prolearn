@@ -1,0 +1,34 @@
+// Place all the styles related to the notifis controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.notifi-title-field{
+	padding: 20px;
+	color: white;
+	background:linear-gradient(135deg, #6094ea 0%,#c050cf 100%);
+	border-radius: 5px;
+	box-shadow: 0 0 8px gray;
+	font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+	margin-bottom: 33px;
+}
+
+.notifi-title{
+	margin-left: 5px;
+}
+
+.user-notifi{
+	margin-bottom: 30px;
+	border-bottom: 1px solid gray;
+}
+
+.user-notifi p{
+	display: inline;
+}
+
+.messge-info{
+	font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+}
+
+.re-btn{
+	margin-top: 5px;
+	margin-left: 35px;
+}

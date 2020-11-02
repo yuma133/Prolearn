@@ -1,0 +1,22 @@
+.signup{
+	border-radius: 5px;
+	box-shadow: 0 0 8px gray;
+	font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+	background: #50a3a2;
+    background:linear-gradient(135deg, #338574 0%,#57ca85 100%);
+    padding: 50px 0;
+}
+
+.field{
+	text-align: center;
+	margin: 7px 0;
+}
+
+.add-op{
+	color: white;
+}
+
+.more{
+	color: white;
+	font-size: 4px;
+}

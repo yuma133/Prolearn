@@ -1,0 +1,125 @@
+// Place all the styles related to the langs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.index-wrap{
+	font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+}
+
+.lang-title2{
+	font-weight: 800;
+	letter-spacing: 3px;
+	color: white;
+}
+
+.add-field{
+	display: flex;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 8px gray;
+	text-align: center;
+	background:linear-gradient(135deg, #727b85 0%,#d3d4d5 100%);
+}
+
+.add-circle{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin-left: 13px;
+	background-color: transparent;
+	box-shadow: 0 0 10px gray;
+	border: 1px solid white;
+	text-align: center;
+	line-height: 75px;
+}
+
+.add-circle:hover{
+	background-color: rgba(255, 255, 255, .2);
+}
+
+.glyphicon-plus{
+	font-size: 20px;
+	color: white;
+}
+
+.add-blow{
+	width: 108px;
+	height: 50px;
+	background:white;
+	position: relative;
+	margin-left: 23px;
+	border-radius: 5px;
+}
+
+.add-blow p{
+	color: black;
+	display: inline;
+	padding-left: 6px;
+	line-height: 50px;
+}
+
+.add-blow::before{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  display: block;
+  left: -10px;
+  top: 12px;
+  border-right: 11px solid white;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+}
+
+.begi-title{
+	color: #3399CC;
+	margin-top: 43px;
+	border-bottom: 1px solid #3399CC;
+}
+
+.person-field{
+	position: relative;
+	height: 230px;
+	margin:12px 12px 0 0;
+	border-radius: 5px;
+	padding-top: 10px;
+	box-shadow: 0 0 8px gray;
+	text-align: center;
+	display: inline-block;
+}
+
+.edit-icon-circle{
+	position: absolute;
+	top: 6px;
+	right: px;
+	padding-top: 2px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 1px solid gray;
+}
+
+.inte-title{
+	color: #339966;
+	border-bottom: 1px solid #339966;
+	margin-top: 65px;
+}
+
+.adva-title{
+	color: #990033;
+	border-bottom: 1px solid #990033;
+	margin-top: 65px;
+}
+
+.jikyu-title{
+	padding-top: 7px;
+}
+
+
+
+
+
+
+
+
+

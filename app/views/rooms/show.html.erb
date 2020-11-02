@@ -1,0 +1,29 @@
+<div class="row">
+  <div claas="col-xs-12">
+    <div class="message-room-field">
+       <h1 class="message-room-title">メッセージルーム</h1>
+       <h4 class="parti-list">参加者</h4>
+       <% @entries.each do |e| %>
+       <h5 class="parti-list"><a href="/users/<%= e.user.id %>"><%= e.user.name %>さん</a></h5>
+       <% end %>
+    </div>
+    <hr>
+    <% if @messages.present? %>
+    <% @messages.each do |m| %>
+    <strong class="message-con"><%= m.content %></strong>
+    <small>by <a href="/users/<%= m.user_id %>"><%= m.user.name %>さん</a></small>
+    <hr>
+    <% end %>
+    <% else %>
+    <h3 class="text-center">メッセージはまだありません</h3>
+    <% end %>
+
+    <%= form_for @message do |f| %>
+    <%= f.text_area :content, :placeholder => "メッセージを入力して下さい" ,class: "form-control" %>
+    <%= f.hidden_field :room_id, :value => @room.id %>
+    <br>
+    <%= f.submit "送信する", class: "btn btn-success send-btn" %>
+    <% end %>
+  </div>
+  <%= paginate @messages %>
+</div>

@@ -1,0 +1,57 @@
+// Place all the styles related to the teaches controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.t-regi-field{
+    align-items: center;
+	color: white;
+	font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+	background: linear-gradient(#05FBFF, #1E00FF);
+	border-radius: 5px;
+	box-shadow: 0 0 8px gray;
+	background:linear-gradient(135deg, #f38c81 0%,#facd88 100%);
+	padding: 23px;
+}
+
+.t-regi-field p{
+	display: inline;
+}
+
+.t-regi-f{
+	width:100px;
+}
+
+.t-regi-s{
+	margin-top: 15px;
+}
+
+.sele-lang-b{
+	color: #333333;
+}
+
+.te-d{
+	margin-top: 15px;
+	margin-left: 5px;
+}
+
+.keiken-ale{
+	padding-bottom: 10px;
+}
+
+.t-edit-field{
+	align-items: center;
+	color: white;
+	font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+	background: linear-gradient(#05FBFF, #1E00FF);
+	border-radius: 5px;
+	box-shadow: 0 0 8px gray;
+	background:linear-gradient(135deg, #184e68 0%,#55c684 100%);
+	padding: 23px;
+}
+
+.t-edit-field p{
+	display: inline;
+}
+
+
+

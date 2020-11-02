@@ -1,0 +1,270 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizeing: border-box;
+}
+
+.top-row{
+	margin-bottom: 50px;
+}
+
+.title-feild{
+	height: 300px;
+	background:linear-gradient(135deg, #17ead9 0%,#4c96e5 100%);
+	border-radius: 5px;
+	box-shadow: 0 0 8px gray;
+}
+
+.top-title{
+	line-height: 300px;
+	letter-spacing: 2px;
+	font-weight: 700;
+	color: white;
+	font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+}
+
+.horizon-field{
+	position: relative;
+	padding: 40px 0;
+}
+
+#horizon {
+	position: absolute;
+    width: 0;
+    height: 2px;
+    background: gray;
+}
+
+.select-field{
+	width: 130px;
+	height: 150px;
+	border-radius: 5px;
+	box-shadow: 0 0 8px gray;
+}
+
+.blow {
+	position:absolute;
+	top: -75px;
+	border-radius: 50%;
+    width:130px;
+    padding:15px;
+    font-size: 12px;
+    background-color: #FFFF66;
+    text-align: center;
+}
+
+.blow:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #FFFF66;
+}
+
+.icon-field1{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: 1px solid black;
+	margin: 0 auto;
+	background-image: url("html-css.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.icon-field2{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: 1px solid black;
+	margin: 0 auto;
+	background-image: url("c.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.icon-field3{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: 1px solid black;
+	margin: 0 auto;
+	background-image: url("java.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.icon-field4{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: 1px solid black;
+	margin: 0 auto;
+	background-image: url("ruby.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.icon-field5{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: 1px solid black;
+	margin: 0 auto;
+	background-image: url("python.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.icon-field6{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: 1px solid black;
+	margin: 0 auto;
+	background-image: url("js.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.icon-field7{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: 1px solid black;
+	margin: 0 auto;
+	background-image: url("php.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.icon-field8{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: 1px solid black;
+	margin: 0 auto;
+	background-image: url("rails.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.icon-field9{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: 1px solid black;
+	margin: 0 auto;
+	background-image: url("jquery.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.about-title-field{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	color: white;
+	font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+	height: 300px;
+	background: linear-gradient(#05FBFF, #1E00FF);
+	border-radius: 5px;
+	box-shadow: 0 0 8px gray;
+	background:linear-gradient(135deg, #87b617 0%,#b6d336 100%);
+}
+
+.about-sub{
+	font-size: 13px;
+}
+
+.otegoro{
+	color: red;
+}
+
+.about-wrap{
+	font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+}
+
+.pro-exp-wrap{
+	margin-top: 60px;
+}
+
+.pro-exp-field{
+	margin-bottom: 70px;
+}
+
+.pro-exp{
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid gray;
+}
+
+.howto-title-field{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	color: white;
+	font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+	height: 300px;
+	background: linear-gradient(#05FBFF, #1E00FF);
+	border-radius: 5px;
+	box-shadow: 0 0 8px gray;
+	background:linear-gradient(135deg, #f0c412 0%,#e77925 100%);
+}
+
+.heading, .money{
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+	margin-top: 40px;
+	border-bottom: 1px solid gray;
+}
+
+#student{
+	color: #3399CC;
+}
+
+#teacher{
+	color: 	#33CC99;
+}
+
+.table{
+	margin-bottom: 30px;
+}
+
+.resetpass{
+	border-radius: 5px;
+	box-shadow: 0 0 8px gray;
+	font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+	background: #50a3a2;
+	background:linear-gradient(135deg, #f02fc2 0%,#6094ea 100%);
+	padding: 50px 0;
+}
+
+.re-pass{
+	margin: 10px 0;
+}
+
+.about-table{
+	margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

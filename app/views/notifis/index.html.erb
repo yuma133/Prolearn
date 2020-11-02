@@ -1,0 +1,20 @@
+<div class="row">
+<div class="col-xs-12 notifi-title-field">
+	<h1 class="notifi-title">通知一覧</h1>
+</div>
+<% if @notifications.exists? %>
+    <div class="notifi-index">
+      <% @notifications.each do |notifi| %>
+        <div class="user-notifi">
+  			   <p class="messge-info">
+            <%= link_to user_path(notifi.visitor.id) do %>
+                <%= notifi.visitor.name %>
+            <% end %>
+            さんから、メッセージが届きました</p> <%= link_to "返信する", room_path(notifi.room_id), class: "btn btn-warning re-btn" %><br><p><span class="moderate-font"><%= notifi.created_at %>前</span></p>
+        </div>
+  		<% end %>
+    </div>
+<% else %>
+    <p class="messge-info">通知はありません</p>
+<% end %>
+</div>

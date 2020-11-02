@@ -1,0 +1,9 @@
+.signin{
+	border-radius: 5px;
+	box-shadow: 0 0 8px gray;
+	font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+	background: #50a3a2;
+    background:linear-gradient(135deg, #513c88 0%,#1bcedf 100%);
+    padding: 50px 0;
+}
+

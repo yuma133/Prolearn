@@ -1,0 +1,31 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.message-room-title, .parti-list{
+	font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+	color:white;
+}
+
+.parti-list a{
+	text-decoration: none;
+	color: pink;
+}
+
+.message-room-field{
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-left: 12px;
+	background:linear-gradient(135deg, #3bb2b8 0%,#41df99 100%);
+	border-radius: 5px;
+	box-shadow: 0 0 8px gray;
+}
+
+.message-con{
+	margin-left: 12px;
+}
+
+.send-btn{
+	margin-top: 10px;
+	margin-left: 12px;
+}

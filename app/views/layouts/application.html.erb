@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>プロラーン</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+<div class="container">
+  <div class="row">
+    <header class="navbar">
+
+      <% if user_signed_in? %>
+      <%= image_tag "logo.png", class: "navbar-left", :size => "50x50" %>
+      <h4 class="web-title navbar-left">プロラーン</h4>
+        <ul class="nav navbar-nav navbar-static-top navbar-right">
+            <li><%= link_to "トップ", root_path, data: {"turbolinks" => false} %></li>
+            <li><%= link_to "ご利用方法", "/howto", data: {"turbolinks" => false} %></li>
+            <%= link_to notifis_path do%>
+            <li>通知
+            <% if unchecked_notifications.any? %>
+                <span class="notifi-dot">・</span>
+            <% end %>
+            <% end %>
+            </li>
+            <li><%= link_to "プロフィール", user_path(current_user.id), data: {"turbolinks" => false} %></li>
+            <li><%= link_to "ログアウト",destroy_user_session_path, method: :delete %></li>
+        </ul>
+      <% else %>
+      <%= image_tag "logo.png", class: "navbar-left", :size => "50x50" %>
+      <h4 class="web-title navbar-left">プロラーン</h4>
+        <ul class="nav navbar-nav navbar-static-top navbar-right">
+            <li><%= link_to "トップ", root_path, data: {"turbolinks" => false} %></li>
+            <li><%= link_to "プロラーンとは?", "/about", data: {"turbolinks" => false} %></li>
+            <li><%= link_to "ご利用方法", "/howto", data: {"turbolinks" => false} %></li>
+            <li><%= link_to "ログイン", new_user_session_path %></li>
+            <li><%= link_to "会員登録",new_user_registration_path %></li>
+       </ul>
+      <% end %>
+  </header>
+  </div>
+
+  <body>
+    <div class="container">
+           <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, class: "#{key}") %>
+    <% end %>
+    <%= yield %>
+    </div>
+  </body>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-center">Copyright © yy All Rights Reserved.</p>
+    </div>
+  </footer>
+</html>
