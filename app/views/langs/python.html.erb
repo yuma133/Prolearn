@@ -29,7 +29,7 @@
 	<div class="col-xs-12 people-field">
 	    <% @users_begis.each do |ub| %>
 		  <div class="col-xs-4 col-sm-2 person-field">
-		 	<%= attachment_image_tag ub, :profile_image, :fill, 70, 70, class: "img-circle profile-thumb", fallback: "no_image.jpg"%><br>
+		 	<%= attachment_image_tag ub, :profile_image, :fill, 70, 70, class: "img-circle profile-thumb", fallback: "no_image.jpg", size:'70x70'%><br>
 		 	<p class="prson-name"><%= ub.name %></p>
 			<% @ta_begis.each do |tb| %>
 				<% if tb.user_id == ub.id %>
@@ -59,7 +59,7 @@
 	<div class="col-xs-12 people-field">
 	    <% @users_intes.each do |ui| %>
 		  <div class="col-xs-4 col-sm-2 person-field">
-		 	<%= attachment_image_tag ui, :profile_image, :fill, 70, 70, class: "img-circle profile-thumb", fallback: "no_image.jpg"%><br>
+		 	<%= attachment_image_tag ui, :profile_image, :fill, 70, 70, class: "img-circle profile-thumb", fallback: "no_image.jpg", size:'70x70'%><br>
 		 	<p class="prson-name"><%= ui.name %></p>
 			<% @ta_intes.each do |ti| %>
 				<% if ti.user_id == ui.id %>
@@ -89,7 +89,7 @@
 	<div class="col-xs-12 people-field">
 	    <% @users_advas.each do |ud| %>
 		  <div class="col-xs-4 col-sm-2 person-field">
-		 	<%= attachment_image_tag ud, :profile_image, :fill, 70, 70, class: "img-circle profile-thumb", fallback: "no_image.jpg"%><br>
+		 	<%= attachment_image_tag ud, :profile_image, :fill, 70, 70, class: "img-circle profile-thumb", fallback: "no_image.jpg", size:'70x70'%><br>
 		 	<p class="prson-name"><%= ud.name %></p>
 			<% @ta_advas.each do |td| %>
 				<% if td.user_id == ud.id %>

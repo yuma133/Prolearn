@@ -6,12 +6,17 @@ class TeachesController < ApplicationController
 	end
 
 	def create
-		@teach_ori = Teach.where(lang: params[:lang], level: params[:level])
 		@teach = Teach.new(teach_params)
-		# 二重追加させないようにできない
+		@teach_ori = Teach.where(user_id: current_user.id)
+		@teach_ori = @teach_ori.where(lang: @teach.lang, level: @teach.level)
 		@teach.user_id = current_user.id
-		if @teach_ori.present?
-			flash[:alert] = "追加できませんでした"
+		@teach_ori.each do |tori|
+			if tori.user_id == @teach.user_id
+				@teach.exit = 1
+			end
+		end
+		if @teach.exit == 1
+			flash[:alert] = "既に追加されています"
 			redirect_to new_user_teach_path(@teach.user_id)
 		else
 			@teach.save
@@ -49,6 +54,6 @@ class TeachesController < ApplicationController
 
 	private
 	def teach_params
-	params.require(:teach).permit(:lang, :level, :income, :career)
+	params.require(:teach).permit(:lang, :level, :income, :career, :exit)
     end
 end
